@@ -9,13 +9,24 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
+		dependencies = { "mason.nvim" },
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
 					"ts_ls",
-					"java_language_server",
+					"jdtls",
 					"kotlin_language_server",
+				},
+			})
+		end,
+	},
+	{
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		dependencies = { "mason.nvim" },
+		config = function()
+			require("mason-tool-installer").setup({
+				ensure_installed = {
 					"isort",
 					"black",
 					"ast-grep",
