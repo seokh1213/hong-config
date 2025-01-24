@@ -15,7 +15,7 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"ts_ls",
-					"jdtls",
+					"java_language_server",
 					"kotlin_language_server",
 				},
 			})
