@@ -1,0 +1,38 @@
+set ideajoin
+set encoding=utf8
+set nocompatible              " 옛날 vim이랑 호환불가
+filetype off                  " Vundle 설정
+
+autocmd! bufwritepost .vimrc source %       " 저장하자마 동기화
+filetype plugin indent on                   " required
+syntax enable
+set cursorline
+set autoindent
+set cindent
+set nu
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set smarttab
+set hlsearch
+set ignorecase
+set smartcase
+set ruler
+set nowrap
+set fo-=t
+let mapleader=","
+imap <Leader>w <ESC>:w<CR>
+nmap <Leader>w :w<CR>
+imap <Leader>q <ESC>:wq<CR>
+nmap <Leader>q :wq<CR>
+imap <Leader>e <ESC>:q!<CR>
+nmap <Leader>e :q!<CR>
+map <Leader>n <ESC>:tabprevious<CR>
+map <Leader>m <ESC>:tabnext<CR>
+map <Leader>t <ESC>:tabnew<CR>
+vnoremap < <gv
+vnoremap > >gv
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+set backspace=indent,eol,start
