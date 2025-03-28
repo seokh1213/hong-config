@@ -1,9 +1,22 @@
+set scrolloff=10
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+
 set ideajoin
 set encoding=utf8
 set nocompatible              " 옛날 vim이랑 호환불가
 filetype off                  " Vundle 설정
 
-autocmd! bufwritepost .vimrc source %       " 저장하자마 동기화
+autocmd! bufwritepost .ideavimrc source %       " 저장하자마 동기화
 filetype plugin indent on                   " required
 syntax enable
 set cursorline
@@ -21,7 +34,7 @@ set smartcase
 set ruler
 set nowrap
 set fo-=t
-let mapleader=","
+let mapleader=" "
 imap <Leader>w <ESC>:w<CR>
 nmap <Leader>w :w<CR>
 imap <Leader>q <ESC>:wq<CR>
